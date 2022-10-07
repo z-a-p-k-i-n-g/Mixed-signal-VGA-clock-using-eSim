@@ -161,13 +161,15 @@ endmodule
   - Open eeSchema</br>
 ## Acknowlegdements
 1. FOSSEE, IIT Bombay
-2. Steve Hoover, Founder, Redwood EDA
+2. Sumanto Kar, eSim Team, FOSSEE
 3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
-4. Sumanto Kar, eSim Team, FOSSEE
+4. Lakshmi Sathi for her PLL design which was used to create frequency divider subcircuit
+4. Matt Venn for his VGA Clock design
+
 
 ## References
-1. Ahmad, Nabihah & Hasan, Rezaul. (2011). A new design of XOR-XNOR gates for low power application. 10.1109/ICEDSA.2011.5959039. 
-2. K. Ravali, N. R. Vijay, S. Jaggavarapu and R. Sakthivel, "Low power XOR gate design and its applications," 2017 Fourth International Conference on Signal Processing, Communication and Networking (ICSCN), 2017, pp. 1-4, doi: 10.1109/ICSCN.2017.8085699.
-3. https://github.com/Eyantra698Sumanto/Two-in-One-Low-power-XOR-XNOR-Gate.git
+1. Laksmi Sathi's PLL design https://github.com/lakshmi-sathi/avsdpll_1v8.git
+2. ProjectF https://projectf.io/posts/fpga-graphics/
+3. Matt Venn's VGA Clock design https://github.com/mattvenn/vga-clock.git
 
 
