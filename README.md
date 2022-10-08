@@ -78,7 +78,7 @@ The following is the schematic in eSim:
 ![image](https://user-images.githubusercontent.com/58599984/156439624-353c14ac-4216-4aa7-8207-64f4c287b2b7.png)
 ![image](https://user-images.githubusercontent.com/58599984/156439590-9371c62f-384b-42f8-9403-9704429d752d.png)
 
-## Steps to run generate NgVeri Model
+## Steps to run and generate NgVeri Model
 1. Open eSim
 2. Run NgVeri-Makerchip 
 3. Add top level verilog file in Makerchip Tab
@@ -90,17 +90,15 @@ The following is the schematic in eSim:
 ## Steps to run this project
 1. Open a new terminal
 2. Clone this project using the following command:</br>
-```git clone https://github.com/Eyantra698Sumanto/XOR-XNOR-Gate.git ```</br>
+```git clone  ```</br>
 3. Change directory:</br>
-```cd eSim_project_files/xor_xnor```</br>
+```cd eSim_project_files/VGAClock```</br>
 4. Run ngspice:</br>
-```ngspice xor_xnor.cir.out```</br>
+```ngspice VGAClock.cir.out```</br>
 5. To run the project in eSim:
 
   - Run eSim</br>
   - Load the project</br>
-  - Run NgVeri and convert verilog top module (vishal_clock) into ngspice model.
-  - Add dependency files and change the location of .hex and .list files in fontROM.v and digit.v files, if error regarding that comes up.
   - Open eeSchema</br>
   
 ## Acknowlegdements 
