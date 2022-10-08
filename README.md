@@ -26,6 +26,7 @@ It outputs display signals namely vsync and hsync, along with 6-bit RGB video ou
 
 ## Reference Display Configuration
 ![image](https://github.com/z-a-p-k-i-n-g/Mixed-signal-VGA-clock-using-eSim/blob/main/Images/display%20signals.png)
+</br>
 P.S - This image is rough...I will change it near future until then please bear with me :}
 
 ## Circuit Details
