@@ -163,13 +163,11 @@ endmodule
 1. FOSSEE, IIT Bombay
 2. Sumanto Kar, eSim Team, FOSSEE
 3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
-4. Lakshmi Sathi for her PLL design which was used to create frequency divider subcircuit
 4. Matt Venn for his VGA Clock design
 
 
 ## References
-1. Laksmi Sathi's PLL design https://github.com/lakshmi-sathi/avsdpll_1v8.git
-2. ProjectF https://projectf.io/posts/fpga-graphics/
-3. Matt Venn's VGA Clock design https://github.com/mattvenn/vga-clock.git
+1. ProjectF https://projectf.io/posts/fpga-graphics/
+2. Matt Venn's VGA Clock design https://github.com/mattvenn/vga-clock.git
 
 
