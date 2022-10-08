@@ -1,0 +1,28 @@
+* /home/vishal.sivakumar.2002/eSim-Workspace/VGAClock/VGAClock.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Sat 08 Oct 2022 07:14:19 PM IST
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ Net-_U1-Pad13_ vishal_clock		
+v1  pul GND pulse		
+v2  Dcin GND DC		
+U2  pul Dcin GND GND GND Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U1-Pad5_ adc_bridge_5		
+U4  vsync plot_v1		
+U5  pul plot_v1		
+U6  Dcin plot_v1		
+scmode1  SKY130mode		
+U3  Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ Net-_U1-Pad13_ hsync vsync rgb5 rgb4 rgb3 rgb2 rgb1 rgb0 dac_bridge_8		
+U7  hsync plot_v1		
+U11  rgb5 plot_v1		
+U12  rgb4 plot_v1		
+U10  rgb2 plot_v1		
+U13  rgb3 plot_v1		
+U9  rgb1 plot_v1		
+U8  rgb0 plot_v1		
+SC1  GND pul Dcin sky130_fd_pr__res_generic_nd		
+SC2  GND Dcin Dcin sky130_fd_pr__res_generic_nd		
+
+.end

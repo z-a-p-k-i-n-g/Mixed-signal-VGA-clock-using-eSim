@@ -1,0 +1,55 @@
+* /home/vishal.sivakumar.2002/esim-workspace/vgaclock/vgaclock.cir
+
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__inductors.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__r+c.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__pnp.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__linear.model.spice"
+.lib "/usr/share/local/sky130_fd_pr/models/sky130.lib.spice" tt
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+* u1  net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ net-_u1-pad13_ vishal_clock
+v1  pul gnd pulse(1.8 0 0 6p 6p 20n 40n)
+v2  dcin gnd dc 1.8
+* u2  pul dcin gnd gnd gnd net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ adc_bridge_5
+* u4  vsync plot_v1
+* u5  pul plot_v1
+* u6  dcin plot_v1
+* s c m o d e
+* u3  net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ net-_u1-pad13_ hsync vsync rgb5 rgb4 rgb3 rgb2 rgb1 rgb0 dac_bridge_8
+* u7  hsync plot_v1
+* u11  rgb5 plot_v1
+* u12  rgb4 plot_v1
+* u10  rgb2 plot_v1
+* u13  rgb3 plot_v1
+* u9  rgb1 plot_v1
+* u8  rgb0 plot_v1
+xsc1 gnd pul dcin sky130_fd_pr__res_generic_nd 
+xsc2 gnd dcin dcin sky130_fd_pr__res_generic_nd 
+a1 [net-_u1-pad1_ ] [net-_u1-pad2_ ] [net-_u1-pad3_ ] [net-_u1-pad4_ ] [net-_u1-pad5_ ] [net-_u1-pad6_ ] [net-_u1-pad7_ ] [net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ net-_u1-pad13_ ] u1
+a2 [pul dcin gnd gnd gnd ] [net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ ] u2
+a3 [net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ net-_u1-pad13_ ] [hsync vsync rgb5 rgb4 rgb3 rgb2 rgb1 rgb0 ] u3
+* Schematic Name:                             vishal_clock, NgSpice Name: vishal_clock
+.model u1 vishal_clock(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             adc_bridge_5, NgSpice Name: adc_bridge
+.model u2 adc_bridge(in_low=0 in_high=1.8 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_8, NgSpice Name: dac_bridge
+.model u3 dac_bridge(out_low=0.0 out_high=1.8 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+.tran 1us 390us 310us
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(vsync)
+plot v(pul)
+plot v(dcin)
+plot v(hsync)
+plot v(rgb5)
+plot v(rgb4)
+plot v(rgb2)
+plot v(rgb3)
+plot v(rgb1)
+plot v(rgb0)
+.endc
+.end
