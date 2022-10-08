@@ -3,7 +3,7 @@
 - [Abstract](#abstract)
 - [Reference Waveform](#reference-waveform)
 - [Circuit Details](#circuit-details)
-- [Display timings](#display-timings-for-640x480@60Hz)
+- [Display timings for 640x480@60Hz](#display-timings-for-640x480@60Hz)
 - [Software Used](#software-used)
   * [eSim](#esim)
   * [NgSpice](#ngspice)
