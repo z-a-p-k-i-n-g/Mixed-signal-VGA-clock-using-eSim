@@ -1,7 +1,7 @@
 # Mixed Signal Circuit Design and Simulation Marathon
 # VGA-Clock
 - [Abstract](#abstract)
-- [Reference Waveform](#reference-waveform)
+- [Reference Display Configuration](#reference-display-configuration)
 - [Circuit Details](#circuit-details)
 - [Display timings](#display-timings)
 - [Software Used](#software-used)
@@ -24,8 +24,9 @@
 A mixed signal SoC capable of displaying time through VGA interface at 640x480@60Hz, has been implemented through eSim. It works on 25MHz clock frequency based on standard VGA timing standards.
 It outputs display signals namely vsync and hsync, along with 6-bit RGB video output. 
 
-## Reference Waveform
-![image](https://user-images.githubusercontent.com/58599984/152688402-29877a15-deb3-4dee-9bcc-2313851182de.png)
+## Reference Display Configuration
+![image](https://github.com/z-a-p-k-i-n-g/Mixed-signal-VGA-clock-using-eSim/blob/main/Images/display%20signals.png)
+P.S - This image is rough...I will change it near future until then please bear with me :}
 
 ## Circuit Details
 Analog part simply consists of few current limiting resistors to save the SoC in times of sudden short circuit.
@@ -65,17 +66,15 @@ https://www.veripool.org/verilator/
 
 ## Circuit Diagram in eSim
 The following is the schematic in eSim:
-![image](https://user-images.githubusercontent.com/58599984/156439856-079de481-b68d-4955-b9c9-6ff310c5de58.png)
+![image](https://github.com/z-a-p-k-i-n-g/Mixed-signal-VGA-clock-using-eSim/blob/main/Images/circuit%20diagram.png)
 
 ## Netlists
-![image](https://user-images.githubusercontent.com/58599984/156440985-0a983124-b5ad-4b60-b83f-7adf0e7c36fb.png)
+![image](https://github.com/z-a-p-k-i-n-g/Mixed-signal-VGA-clock-using-eSim/blob/main/Images/netlist.png)
 
 ## NgSpice Plots
-![image](https://user-images.githubusercontent.com/58599984/156440036-188911e0-9bb2-4d9f-b53d-878f5792d1c6.png)
-![image](https://user-images.githubusercontent.com/58599984/156440082-c3f319ef-3224-4595-85e9-38bae135350f.png)
+![image](https://github.com/z-a-p-k-i-n-g/Mixed-signal-VGA-clock-using-eSim/blob/main/Images/hsync.png)
+![image](https://github.com/z-a-p-k-i-n-g/Mixed-signal-VGA-clock-using-eSim/blob/main/Images/vsync.png)
 
-![image](https://user-images.githubusercontent.com/58599984/156439624-353c14ac-4216-4aa7-8207-64f4c287b2b7.png)
-![image](https://user-images.githubusercontent.com/58599984/156439590-9371c62f-384b-42f8-9403-9704429d752d.png)
 
 ## Steps to run and generate NgVeri Model
 1. Open eSim
