@@ -3,14 +3,13 @@
 - [Abstract](#abstract)
 - [Reference Waveform](#reference-waveform)
 - [Circuit Details](#circuit-details)
-- [Display timings for 640x480@60Hz](#display-timings)
+- [Display timings](#display-timings)
 - [Software Used](#software-used)
   * [eSim](#esim)
   * [NgSpice](#ngspice)
   * [Makerchip](#makerchip)
   * [Verilator](#verilator)
 - [Circuit Diagram in eSim](#circuit-diagram-in-esim)
-- [Verilog Code](#verilog-code)
 - [Netlists](#netlists)
 - [NgSpice Plots](#ngspice-plots)
 - [Steps to run generate NgVeri Model](#steps-to-run-generate-ngveri-model)
@@ -67,10 +66,10 @@ https://www.veripool.org/verilator/
 ## Circuit Diagram in eSim
 The following is the schematic in eSim:
 ![image](https://user-images.githubusercontent.com/58599984/156439856-079de481-b68d-4955-b9c9-6ff310c5de58.png)
-## Verilog Code
-![image](https://user-images.githubusercontent.com/58599984/156445908-1af8255c-d17c-4275-8e24-ee65c96af66a.png)
+
 ## Netlists
 ![image](https://user-images.githubusercontent.com/58599984/156440985-0a983124-b5ad-4b60-b83f-7adf0e7c36fb.png)
+
 ## NgSpice Plots
 ![image](https://user-images.githubusercontent.com/58599984/156440036-188911e0-9bb2-4d9f-b53d-878f5792d1c6.png)
 ![image](https://user-images.githubusercontent.com/58599984/156440082-c3f319ef-3224-4595-85e9-38bae135350f.png)
@@ -90,7 +89,7 @@ The following is the schematic in eSim:
 ## Steps to run this project
 1. Open a new terminal
 2. Clone this project using the following command:</br>
-```git clone  ```</br>
+```git clone  https://github.com/z-a-p-k-i-n-g/Mixed-signal-VGA-clock-using-eSim.git```</br>
 3. Change directory:</br>
 ```cd eSim_project_files/VGAClock```</br>
 4. Run ngspice:</br>
