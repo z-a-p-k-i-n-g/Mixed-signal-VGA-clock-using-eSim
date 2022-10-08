@@ -35,15 +35,15 @@ Analog part simply consists of few current limiting resistors to save the SoC in
 In the digital part, there is a  display signal generation block to generate hsync and vsync signals for VGA, with the help of display timing information and a drawing logic block which implements the clock as FSM. The latter is also responsible for rendering time onto screen through  red, blue and green channels by reading data from ROM implemented for fonts and various .hex files included. Orginal code has been tweaked to work at refresh rate of 60Hz.    
 
 ## Display timings
-   PIXEL_CLK   =   25000
-    H_DISP      =   640
-    V_DISP      =   480
-    H_FPORCH    =   16
-    H_SYNC      =   96
-    H_BPORCH    =   48
-    V_FPORCH    =   10
-    V_SYNC      =   2
-    V_BPORCH    =   33
+   PIXEL_CLK   =   25000 </br>
+    H_DISP      =   640</br>
+    V_DISP      =   480</br>
+    H_FPORCH    =   16</br>
+    H_SYNC      =   96</br>
+    H_BPORCH    =   48</br>
+    V_FPORCH    =   10</br>
+    V_SYNC      =   2</br>
+    V_BPORCH    =   33</br>
     Sync polarity is negative for both hsync and vsync
 
 
