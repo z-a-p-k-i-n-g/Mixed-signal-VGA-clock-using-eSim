@@ -1,10 +1,9 @@
 # Mixed Signal Circuit Design and Simulation Marathon
-# XOR-XNOR-Gate
+# VGA-Clock
 - [Abstract](#abstract)
-- [Reference Circuit Diagram](#reference-circuit-diagram)
 - [Reference Waveform](#reference-waveform)
 - [Circuit Details](#circuit-details)
-- [Truth Table](#truth-table)
+- [Display timings](#display-timings-for-640x480@60Hz)
 - [Software Used](#software-used)
   * [eSim](#esim)
   * [NgSpice](#ngspice)
@@ -28,17 +27,26 @@
 ## Abstract
 A mixed signal SoC capable of displaying time through VGA interface at 640x480@60Hz, has been implemented through eSim. It works on 25MHz clock frequency based on standard VGA timing standards.
 It outputs display signals namely vsync and hsync, along with 6-bit RGB video output. 
-## Reference Circuit Diagram
-![image](https://user-images.githubusercontent.com/58599984/152688334-fa3ad04d-e142-4dd1-a0cf-00fd13ca2d9e.png)
+
 ## Reference Waveform
 ![image](https://user-images.githubusercontent.com/58599984/152688402-29877a15-deb3-4dee-9bcc-2313851182de.png)
+
 ## Circuit Details
 Analog part simply consists of few current limiting resistors to save the SoC in times of sudden short circuit.
 </br>
 In the digital part, there is a  display signal generation block to generate hsync and vsync signals for VGA, with the help of display timing information and a drawing logic block which implements the clock as FSM. The latter is also responsible for rendering time onto screen through  red, blue and green channels by reading data from ROM implemented for fonts and various .hex files included. Orginal code has been tweaked to work at refresh rate of 60Hz.    
 
 ## Display timings for 640x480@60Hz
-
+   PIXEL_CLK   =   25000
+    H_DISP      =   640
+    V_DISP      =   480
+    H_FPORCH    =   16
+    H_SYNC      =   96
+    H_BPORCH    =   48
+    V_FPORCH    =   10
+    V_SYNC      =   2
+    V_BPORCH    =   33
+    Sync polarity is negative for both hsync and vsync
 
 
 ## Software Used
