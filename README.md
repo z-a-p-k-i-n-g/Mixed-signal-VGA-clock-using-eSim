@@ -3,7 +3,7 @@
 - [Abstract](#abstract)
 - [Reference Waveform](#reference-waveform)
 - [Circuit Details](#circuit-details)
-- [Display timings for 640x480@60Hz](#display-timings-for-640x480@60Hz)
+- [Display timings for 640x480@60Hz](#display-timings)
 - [Software Used](#software-used)
   * [eSim](#esim)
   * [NgSpice](#ngspice)
@@ -11,11 +11,8 @@
   * [Verilator](#verilator)
 - [Circuit Diagram in eSim](#circuit-diagram-in-esim)
 - [Verilog Code](#verilog-code)
-- [Makerchip](#makerchip-1)
-- [Makerchip Plots](#makerchip-plots)
 - [Netlists](#netlists)
 - [NgSpice Plots](#ngspice-plots)
-- [GAW Plots](#gaw-plots)
 - [Steps to run generate NgVeri Model](#steps-to-run-generate-ngveri-model)
 - [Steps to run this project](#steps-to-run-this-project)
 - [Acknowlegdements](#acknowlegdements)
@@ -36,7 +33,7 @@ Analog part simply consists of few current limiting resistors to save the SoC in
 </br>
 In the digital part, there is a  display signal generation block to generate hsync and vsync signals for VGA, with the help of display timing information and a drawing logic block which implements the clock as FSM. The latter is also responsible for rendering time onto screen through  red, blue and green channels by reading data from ROM implemented for fonts and various .hex files included. Orginal code has been tweaked to work at refresh rate of 60Hz.    
 
-## Display timings for 640x480@60Hz
+## Display timings
    PIXEL_CLK   =   25000
     H_DISP      =   640
     V_DISP      =   480
@@ -80,8 +77,7 @@ The following is the schematic in eSim:
 
 ![image](https://user-images.githubusercontent.com/58599984/156439624-353c14ac-4216-4aa7-8207-64f4c287b2b7.png)
 ![image](https://user-images.githubusercontent.com/58599984/156439590-9371c62f-384b-42f8-9403-9704429d752d.png)
-## GAW Plots
-![image](https://user-images.githubusercontent.com/58599984/156439535-edb78fc7-a6e6-4178-864a-7cea5ea37e23.png)
+
 ## Steps to run generate NgVeri Model
 1. Open eSim
 2. Run NgVeri-Makerchip 
@@ -103,12 +99,15 @@ The following is the schematic in eSim:
 
   - Run eSim</br>
   - Load the project</br>
+  - Run NgVeri and convert verilog top module (vishal_clock) into ngspice model.
+  - Add dependency files and change the location of .hex and .list files in fontROM.v and digit.v files, if error regarding that comes up.
   - Open eeSchema</br>
-## Acknowlegdements
-1. FOSSEE, IIT Bombay
-2. Sumanto Kar, eSim Team, FOSSEE
-3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
-4. Matt Venn for his VGA Clock design
+  
+## Acknowlegdements 
+1. Sumanto Kar, eSim Team, FOSSEE
+2. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
+3. Matt Venn for his VGA Clock design
+4. FOSSEE, IIT Bombay
 
 
 ## References
